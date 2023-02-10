@@ -20,7 +20,7 @@ WORKDIR /
 
 COPY --from=build /farmeasy-build-file /farmeasy-build-file
 
-EXPOSE 3000
+EXPOSE 33001
 
 
 
