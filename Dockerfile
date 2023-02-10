@@ -11,17 +11,17 @@ RUN go mod download
 
 COPY . ./
 
-RUN go build -o /movieticket-build-file
+RUN go build -o /farmeasy-build-file
 
 ## Deploy
 FROM gcr.io/distroless/base-debian10
 
 WORKDIR /
 
-COPY --from=build /movieticket-build-file /movieticket-build-file
+COPY --from=build /farmeasy-build-file /farmeasy-build-file
 
 EXPOSE 3000
 
 
 
-CMD ["/movieticket-build-file", "start"]
+CMD ["/farmeasy-build-file", "start"]
